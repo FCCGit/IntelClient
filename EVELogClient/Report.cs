@@ -48,7 +48,7 @@ namespace EVELogClient
             {
                 Console.WriteLine("Lost Jabber connection, trying to reestablish...");
             }
-            xmppClient.Send(new Message("ryshar@jabber.fatal-ascension.com/Home", MessageType.chat, message));
+            xmppClient.Send(new Message(Properties.JABBER_TARGET, MessageType.chat, message));
         }
     }
 }

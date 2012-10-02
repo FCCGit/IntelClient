@@ -20,6 +20,7 @@ namespace EVELogClient
         public static readonly int JABBER_PORT = 5222;
         public static readonly string JABBER_USER = "ryshar";
         public static readonly string JABBER_PASS = "******";
+        public static readonly string JABBER_TARGET = "ryshar@jabber.fatal-ascension.com/Home";
 
 
         static readonly Dictionary<string, string> props = new Dictionary<string, string>();
