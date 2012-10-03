@@ -38,14 +38,14 @@ namespace EVELogClient
 
         public static void reportViaHTTP(string message)
         {
-            WebClient client = new WebClient();
-            client.Proxy = null;
+            
+            WebClient webClient = new WebClient();
+            webClient.Proxy = null;
             NameValueCollection values = new NameValueCollection();
             values.Add("user", Properties.getProperty("USER_ID"));
             values.Add("userkey", Properties.getProperty("USER_KEY"));
             values.Add("message", message);
-            client.UploadValues(Properties.HTTP_URL, "POST", values);
-            client.Dispose();
+            webClient.UploadValues(Properties.HTTP_URL, "POST", values);
         }
 
 
