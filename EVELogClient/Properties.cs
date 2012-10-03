@@ -15,6 +15,7 @@ namespace EVELogClient
         public static readonly int SLEEP = 15;
         //config file path
         public static readonly string CONFIG_FILE = "config.ini";
+        public static readonly string HTTP_URL = "https://www.fatal-ascension.com/eve_intel/post_data.php";
         //jabber info stored internally to obfuscate the password data
         public static readonly string JABBER_URL = "jabber.fatal-ascension.com";
         public static readonly int JABBER_PORT = 5222;
@@ -37,6 +38,7 @@ namespace EVELogClient
             }
             catch
             {
+                Console.WriteLine("No config.ini file found, using defaults");
                 //use defaults if no config file found
                 props["LOG_DIR"] = Environment.GetEnvironmentVariable("HOMEDRIVE") + Environment.GetEnvironmentVariable("HOMEPATH") + "\\Documents\\EVE\\logs\\Chatlogs";
                 props["JABBER_TIMEOUT"] = "10";

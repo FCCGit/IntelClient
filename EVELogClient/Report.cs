@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading;
-using System.Security.Cryptography.X509Certificates;
+using System.Net;
+using System.Collections.Specialized;
 using agsXMPP;
 using agsXMPP.protocol.client;
 using agsXMPP.Xml.Dom;
@@ -14,12 +15,7 @@ namespace EVELogClient
     {
         private static XmppClientConnection xmppClient;
 
-        static Report()
-        {
-            init();
-        }
-
-        private static void init()
+        private static void initXMPP()
         {
             xmppClient = new XmppClientConnection(Properties.JABBER_URL, Properties.JABBER_PORT);
             xmppClient.Open(Properties.JABBER_USER, Properties.JABBER_PASS);
@@ -40,13 +36,30 @@ namespace EVELogClient
             }
         }
 
+        public static void reportViaHTTP(string message)
+        {
+            WebClient client = new WebClient();
+            client.Proxy = null;
+            NameValueCollection values = new NameValueCollection();
+            values.Add("user", Properties.getProperty("USER_ID"));
+            values.Add("userkey", Properties.getProperty("USER_KEY"));
+            values.Add("message", message);
+            client.UploadValues(Properties.HTTP_URL, "POST", values);
+            client.Dispose();
+        }
+
 
         
         public static void reportViaXMPP(string message)
         {
-            if (xmppClient.XmppConnectionState != XmppConnectionState.SessionStarted)
+            if (xmppClient == null)
+            {
+                initXMPP();
+            }
+            else if (xmppClient.XmppConnectionState != XmppConnectionState.SessionStarted)
             {
                 Console.WriteLine("Lost Jabber connection, trying to reestablish...");
+                initXMPP();
             }
             xmppClient.Send(new Message(Properties.JABBER_TARGET, MessageType.chat, message));
         }

@@ -95,7 +95,7 @@ namespace EVELogClient
                 return;
             }
             
-            Report.reportViaXMPP(channel+": "+message.Name+"["+message.Timestamp.ToString()+"]: "+message.Message);
+            Report.reportViaHTTP(channel+": "+message.Name+"["+message.Timestamp.ToString()+"]: "+message.Message);
         }
     }
 

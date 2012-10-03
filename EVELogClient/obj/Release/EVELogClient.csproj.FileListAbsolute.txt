@@ -22,3 +22,4 @@ C:\Users\Thundermoose\Desktop\eve-intel\EVELogClient\bin\Release\EVELogMonitor.p
 C:\Users\Thundermoose\Desktop\eve-intel\EVELogClient\bin\Release\LogMonitor.pdb
 C:\Users\Thundermoose\Desktop\eve-intel\EVELogClient\bin\Release\agsXMPP.xml
 C:\Users\Thundermoose\Desktop\eve-intel\EVELogClient\obj\Release\EVELogClient.csprojResolveAssemblyReference.cache
+C:\Users\Thundermoose\Desktop\eve-intel\EVELogClient\bin\Release\config.ini
