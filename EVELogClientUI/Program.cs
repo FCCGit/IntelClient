@@ -59,10 +59,12 @@ namespace EVELogClient
 
         public static void stopMonitor()
         {
-            logThread.Abort();
-            logThread.Join();
-            logThread = null;
-            Console.WriteLine("murder");
+            if (logThread != null)
+            {
+                logThread.Abort();
+                logThread.Join();
+                logThread = null;
+            }
         }
 
         static void handleError(string err)
