@@ -17,6 +17,7 @@ namespace EVELogClient
             InitializeComponent();
             this.channel.KeyDown += addChannel;
             this.channelList.KeyDown += removeChannel;
+            this.ControlBox = false;
             populateFields();
         }
 
@@ -83,5 +84,6 @@ namespace EVELogClient
                 MessageBox.Show(this, "Please fill in all required fields");
             }
         }
+
     }
 }
