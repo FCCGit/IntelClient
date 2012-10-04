@@ -1,5 +1,0 @@
-C:\Users\Thundermoose\Desktop\eve-intel\eve-intel-monitor-read-only\LogMonitor\bin\Debug\LogMonitor.dll
-C:\Users\Thundermoose\Desktop\eve-intel\eve-intel-monitor-read-only\LogMonitor\bin\Debug\LogMonitor.pdb
-C:\Users\Thundermoose\Desktop\eve-intel\eve-intel-monitor-read-only\LogMonitor\obj\Debug\LogMonitor.csprojResolveAssemblyReference.cache
-C:\Users\Thundermoose\Desktop\eve-intel\eve-intel-monitor-read-only\LogMonitor\obj\Debug\LogMonitor.dll
-C:\Users\Thundermoose\Desktop\eve-intel\eve-intel-monitor-read-only\LogMonitor\obj\Debug\LogMonitor.pdb

@@ -1,7 +1,0 @@
-C:\Users\Thundermoose\Desktop\eve-intel\eve-intel-monitor-read-only\EVELogMonitor\bin\Release\EVELogMonitor.dll
-C:\Users\Thundermoose\Desktop\eve-intel\eve-intel-monitor-read-only\EVELogMonitor\bin\Release\EVELogMonitor.pdb
-C:\Users\Thundermoose\Desktop\eve-intel\eve-intel-monitor-read-only\EVELogMonitor\bin\Release\LogMonitor.dll
-C:\Users\Thundermoose\Desktop\eve-intel\eve-intel-monitor-read-only\EVELogMonitor\bin\Release\LogMonitor.pdb
-C:\Users\Thundermoose\Desktop\eve-intel\eve-intel-monitor-read-only\EVELogMonitor\obj\Release\EVELogMonitor.csprojResolveAssemblyReference.cache
-C:\Users\Thundermoose\Desktop\eve-intel\eve-intel-monitor-read-only\EVELogMonitor\obj\Release\EVELogMonitor.dll
-C:\Users\Thundermoose\Desktop\eve-intel\eve-intel-monitor-read-only\EVELogMonitor\obj\Release\EVELogMonitor.pdb

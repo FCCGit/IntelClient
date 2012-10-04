@@ -1,0 +1,23 @@
+10/3/2012 11:09:46 PM
+
+Exception of type 'System.Exception' was thrown.
+   at EVELogClient.IntelMonitor.run() in c:\Users\Thundermoose\Desktop\eve-intel\EVELogClientUI\IntelMonitor.cs:line 32
+---------------------------------------------------------------------------------------------------------------
+10/3/2012 11:14:58 PM
+
+An item with the same key has already been added.
+   at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   at System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   at EVELogClient.IntelMonitor.initChannels() in c:\Users\Thundermoose\Desktop\eve-intel\EVELogClientUI\IntelMonitor.cs:line 68
+   at EVELogClient.IntelMonitor.run() in c:\Users\Thundermoose\Desktop\eve-intel\EVELogClientUI\IntelMonitor.cs:line 33
+---------------------------------------------------------------------------------------------------------------
+10/3/2012 11:15:16 PM
+
+An item with the same key has already been added.
+   at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   at System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   at EVELogClient.IntelMonitor.initChannels() in c:\Users\Thundermoose\Desktop\eve-intel\EVELogClientUI\IntelMonitor.cs:line 68
+   at EVELogClient.IntelMonitor.run() in c:\Users\Thundermoose\Desktop\eve-intel\EVELogClientUI\IntelMonitor.cs:line 33
+---------------------------------------------------------------------------------------------------------------
