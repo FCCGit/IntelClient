@@ -180,6 +180,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.key);
             this.Controls.Add(this.username);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Settings";
             this.Text = "Settings";
             this.ResumeLayout(false);

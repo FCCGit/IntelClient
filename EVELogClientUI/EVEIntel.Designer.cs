@@ -44,11 +44,13 @@ namespace EVELogClient
             // 
             // statusStrip
             // 
+            this.statusStrip.AllowMerge = false;
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.status});
             this.statusStrip.Location = new System.Drawing.Point(0, 143);
             this.statusStrip.Name = "statusStrip";
             this.statusStrip.Size = new System.Drawing.Size(182, 22);
+            this.statusStrip.SizingGrip = false;
             this.statusStrip.TabIndex = 0;
             this.statusStrip.Text = "status";
             // 
@@ -92,6 +94,8 @@ namespace EVELogClient
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "EVEIntel";
             this.Text = "EVEIntel";
             this.Load += new System.EventHandler(this.Form1_Load);
