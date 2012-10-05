@@ -1,5 +1,6 @@
-﻿EVEIntel Client
-	This program acts as an intellignce gathering tool. It will monitor a user-defined list of EVE intel channels and report the messages it sees to the mothership.
+﻿EVEIntel Client v0.1
+
+This program acts as an intellignce gathering tool. It will monitor a user-defined list of EVE intel channels and report the messages it sees to the mothership.
 
 Requirements:
 	To run this, you must have at Microsoft's .NET framework installed. The minimum supported version is 4.0. To get it, go here: http://www.microsoft.com/net
@@ -7,5 +8,9 @@ Requirements:
 Running:
 	To run this, just double-click the executable. The first time you run, it will prompt you to enter several values in a settings window. These values are saved to a config.ini file in the same directory as the executable, which is generated when you click 'Save'. If the config.ini file is removed, you will be prompted again to enter the required values.
 
+Notes:
+	The tool will check for new entries in channels that existed at startup time every 15 seconds. It will check for new channels every 90 seconds. This means that you may not actually send any updates in a channel you just joined for more than a minute. These settings are not currently user modifiable.
+	
 Errors:
 	If errors are encountered, they should be logged to an error.log file in the same directory as the executable. Please report errors you get!
+	
