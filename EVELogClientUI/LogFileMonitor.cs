@@ -58,11 +58,12 @@ namespace EVELogClient
 
             // if the file has been written since it has been read
             fileChannel.File.Refresh();
-            if (fileChannel.File.LastWriteTime.Ticks > fileChannel.LastReadTime)
-            {
+           // if (fileChannel.File.LastWriteTime.Ticks > fileChannel.LastReadTime)
+            //{
                 // force update the file
                 updateFileData(fileChannel);
-            }
+            //}
+            
         }
 
         private void OnChanged(object source, FileSystemEventArgs e)

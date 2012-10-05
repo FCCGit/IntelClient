@@ -27,22 +27,32 @@ namespace EVELogClient
                 onStatusChange("Adding channels");
                 foreach (string channel in IntelProperties.getProperty("CHANNELS").Split(','))
                 {
+                    Console.WriteLine("\t"+channel);
                     monitoredChannels.Add(channel.Trim());
                 }
                 onStatusChange("Initializing channels");
-                initChannels();
+                refreshChannels();
 
                 onStatusChange("Monitoring channels");
+
+                int fullRefreshCount = 0;
                 while (true)
                 {
-                    Console.WriteLine("Sleeping");
+                    //Console.WriteLine("Sleeping");
                     Thread.Sleep(IntelProperties.SLEEP * 1000);
                     readChannels();
+                    if (fullRefreshCount++ == 5)
+                    {
+                        //Console.WriteLine("Full refresh");
+                        refreshChannels();
+                        fullRefreshCount = 0;
+                    }
                 }
             }
             catch (ThreadAbortException e)
             {
-                //do nothing
+                //return, we've been killed
+                return;
             }
             catch (Exception e)
             {
@@ -64,12 +74,12 @@ namespace EVELogClient
                 if (monitoredChannels.Contains(name))
                 {
                     Console.WriteLine("Monitoring "+name);
-                    channels.Remove(name);
                     channels.Add(name, new Monitor(m));
                 }
             }
         }
 
+        //check to see if theres a more up-to-date version of any channel
         private void refreshChannels()
         {
             LogDirectoryMonitor l = new LogDirectoryMonitor(IntelProperties.EXPIRY);
@@ -78,13 +88,16 @@ namespace EVELogClient
             List<LogFileMonitor> monitors = l.ReadDirectory();
             foreach (LogFileMonitor m in monitors)
             {
+                m.Refresh(true);
                 string name = m.FileChannel.Channel.ChannelName;
+
                 //if this channel is already being monitored, check to make sure the files are the same
                 if (monitoredChannels.Contains(name) && channels.ContainsKey(name))
                 {
                     Monitor om = channels[name];
-                    if (om.logMonitor.FileChannel.File.Name != m.FileChannel.File.Name)
+                    if (om.logMonitor.FileChannel.File.Name != m.FileChannel.File.Name && om.logMonitor.FileChannel.File.LastWriteTime < m.FileChannel.File.LastWriteTime)
                     {
+                        Console.WriteLine("Updating file "+m.FileChannel.File.Name);
                         channels.Remove(name);
                         channels.Add(name, new Monitor(m));
                     }
@@ -92,7 +105,7 @@ namespace EVELogClient
                 else if (monitoredChannels.Contains(name) && !channels.ContainsKey(name))
                 {
                     //else, just add a new monitor
-                    channels.Remove(name);
+                    Console.WriteLine("Monitoring " + name);
                     channels.Add(name, new Monitor(m));
                 }
             }
@@ -151,7 +164,8 @@ namespace EVELogClient
             {
                 return;
             }
-            
+
+            Console.WriteLine(message);            
             Report.reportViaHTTP(channel+": "+message.Name+"["+message.Timestamp.ToString()+"]: "+message.Message);
         }
     }

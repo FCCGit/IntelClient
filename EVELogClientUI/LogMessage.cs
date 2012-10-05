@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace EVELogClient
 {
@@ -14,6 +15,7 @@ namespace EVELogClient
         private DateTime timestamp;
         private string name;
         private string message;
+        private static Regex rgx = new Regex("\\[ [0-9]{4}\\.[0-9]{2}\\.[0-9]{2} [0-9]{2}:[0-9]{2}:[0-9]{2} \\] [^\\>]* \\> [^\\n]*");
 
         public LogChannel Channel { get { return channel; } }
         public DateTime Timestamp { get { return timestamp; } }
@@ -22,8 +24,7 @@ namespace EVELogClient
 
         public static bool isValidMessage(string line)
         {
-            // a primitive check to make sure the the line "looks like" the user message
-            return line.Contains("[ ") && line.Contains(" ] ") && line.Contains(" > ");
+            return rgx.Matches(line).Count > 0;
         }
 
         public LogMessage()

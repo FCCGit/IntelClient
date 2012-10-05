@@ -47,7 +47,7 @@ namespace EVELogClient
             {
                 Console.WriteLine("No config.ini file found, using defaults");
                 props["LOG_DIR"] = Environment.GetEnvironmentVariable("HOMEDRIVE") + Environment.GetEnvironmentVariable("HOMEPATH") + "\\Documents\\EVE\\logs\\Chatlogs";
-                props["CHANNELS"] = "CR.Intel,PB_F_INTEL,DK_SURVEILLANCE,Fountaindef,honeybadger intel,synd.int,VNL_INT,BRANTEL,EC_Gate,The Clusterfuck";
+                props["CHANNELS"] = "CR.Intel,PB_F_INTEL,DK_Surveillance,Fountaindef,honeybadger intel,synd.int,VNL_INT,brantel,EC_Gate,The Clusterfuck";
                 onConfigCreate();
                 save();
             }

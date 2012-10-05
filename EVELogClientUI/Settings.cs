@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -63,8 +64,14 @@ namespace EVELogClient
         {
             IntelProperties.setProperty("USER_ID", this.username.Text);
             IntelProperties.setProperty("USER_KEY", this.key.Text);
+
+            if (!Directory.Exists(this.logDir.Text))
+            {
+                MessageBox.Show(this, "Log directory not found");
+                return;
+            }
             IntelProperties.setProperty("LOG_DIR", this.logDir.Text);
-            
+
             string chnls = "";
             foreach (string channel in this.channelList.Items)
             {
