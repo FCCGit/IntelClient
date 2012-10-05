@@ -1,0 +1,11 @@
+﻿EVEIntel Client
+	This program acts as an intellignce gathering tool. It will monitor a user-defined list of EVE intel channels and report the messages it sees to the mothership.
+
+Requirements:
+	To run this, you must have at Microsoft's .NET framework installed. The minimum supported version is 4.0. To get it, go here: http://www.microsoft.com/net
+
+Running:
+	To run this, just double-click the executable. The first time you run, it will prompt you to enter several values in a settings window. These values are saved to a config.ini file in the same directory as the executable, which is generated when you click 'Save'. If the config.ini file is removed, you will be prompted again to enter the required values.
+
+Errors:
+	If errors are encountered, they should be logged to an error.log file in the same directory as the executable. Please report errors you get!
