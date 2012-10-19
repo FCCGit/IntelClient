@@ -1,10 +1,9 @@
 C:\Users\Thundermoose\Desktop\eve-intel\EVELogClientUI\bin\Release\EVELogClientUI.exe.config
 C:\Users\Thundermoose\Desktop\eve-intel\EVELogClientUI\bin\Release\EVELogClientUI.exe
 C:\Users\Thundermoose\Desktop\eve-intel\EVELogClientUI\bin\Release\EVELogClientUI.pdb
-C:\Users\Thundermoose\Desktop\eve-intel\EVELogClientUI\obj\Release\EVELogClientUI.csprojResolveAssemblyReference.cache
+C:\Users\Thundermoose\Desktop\eve-intel\EVELogClientUI\obj\Release\EVELogClient.EVEIntel.resources
 C:\Users\Thundermoose\Desktop\eve-intel\EVELogClientUI\obj\Release\EVELogClientUI.Properties.Resources.resources
+C:\Users\Thundermoose\Desktop\eve-intel\EVELogClientUI\obj\Release\EVELogClient.Settings.resources
 C:\Users\Thundermoose\Desktop\eve-intel\EVELogClientUI\obj\Release\EVELogClientUI.csproj.GenerateResource.Cache
 C:\Users\Thundermoose\Desktop\eve-intel\EVELogClientUI\obj\Release\EVELogClientUI.exe
 C:\Users\Thundermoose\Desktop\eve-intel\EVELogClientUI\obj\Release\EVELogClientUI.pdb
-C:\Users\Thundermoose\Desktop\eve-intel\EVELogClientUI\obj\Release\EVELogClient.EVEIntel.resources
-C:\Users\Thundermoose\Desktop\eve-intel\EVELogClientUI\obj\Release\EVELogClient.Settings.resources

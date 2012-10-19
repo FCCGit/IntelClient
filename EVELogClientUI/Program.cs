@@ -28,8 +28,7 @@ namespace EVELogClient
 
             while (true)
             {
-                Thread.Yield();
-                //Thread.Sleep(5);
+                Thread.Sleep(5);
             }
         }
 

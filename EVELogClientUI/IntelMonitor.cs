@@ -159,7 +159,7 @@ namespace EVELogClient
             }
 
             //check the timestamp, make sure this is relevant
-            TimeSpan diff = DateTime.Now - TimeZoneInfo.ConvertTimeBySystemTimeZoneId(message.Timestamp, "Greenwich Standard Time", TimeZoneInfo.Local.Id);
+            TimeSpan diff = getDiff(DateTime.UtcNow, message.Timestamp);
             if (diff.TotalMinutes > IntelProperties.EXPIRY)
             {
                 return;
@@ -167,6 +167,15 @@ namespace EVELogClient
 
             Console.WriteLine(message);            
             Report.reportViaHTTP(channel+": "+message.Name+"["+message.Timestamp.ToString()+"]: "+message.Message);
+        }
+
+        private TimeSpan getDiff(DateTime local, DateTime eve)
+        {
+            DateTime newEve = TimeZoneInfo.ConvertTimeBySystemTimeZoneId(eve, "Greenwich Standard Time", TimeZoneInfo.Local.Id);
+            TimeSpan diff = local - eve;
+
+            //Console.WriteLine(local.ToString() +"-"+ eve.ToString() + " = " + diff);
+            return diff;
         }
     }
 

@@ -18,7 +18,9 @@ namespace EVELogClient
             values.Add("user", IntelProperties.getProperty("USER_ID"));
             values.Add("userkey", IntelProperties.getProperty("USER_KEY"));
             values.Add("message", message);
+
             webClient.UploadValues(IntelProperties.HTTP_URL, "POST", values);
+            webClient.Dispose();
         }
     }
 }

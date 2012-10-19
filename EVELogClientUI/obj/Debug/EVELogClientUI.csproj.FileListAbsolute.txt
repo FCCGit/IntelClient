@@ -1,0 +1,9 @@
+C:\Users\Thundermoose\Desktop\eve-intel\EVELogClientUI\bin\Debug\EVELogClientUI.exe.config
+C:\Users\Thundermoose\Desktop\eve-intel\EVELogClientUI\bin\Debug\EVELogClientUI.exe
+C:\Users\Thundermoose\Desktop\eve-intel\EVELogClientUI\bin\Debug\EVELogClientUI.pdb
+C:\Users\Thundermoose\Desktop\eve-intel\EVELogClientUI\obj\Debug\EVELogClient.EVEIntel.resources
+C:\Users\Thundermoose\Desktop\eve-intel\EVELogClientUI\obj\Debug\EVELogClientUI.Properties.Resources.resources
+C:\Users\Thundermoose\Desktop\eve-intel\EVELogClientUI\obj\Debug\EVELogClient.Settings.resources
+C:\Users\Thundermoose\Desktop\eve-intel\EVELogClientUI\obj\Debug\EVELogClientUI.csproj.GenerateResource.Cache
+C:\Users\Thundermoose\Desktop\eve-intel\EVELogClientUI\obj\Debug\EVELogClientUI.exe
+C:\Users\Thundermoose\Desktop\eve-intel\EVELogClientUI\obj\Debug\EVELogClientUI.pdb
